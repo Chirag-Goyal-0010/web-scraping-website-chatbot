@@ -10,6 +10,8 @@ gem "pgvector"
 gem "httparty"
 # HTML parsing for scraping
 gem "nokogiri"
+# OpenAI API client for embeddings
+gem "ruby-openai", require: "openai"
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
@@ -50,4 +52,10 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  # Testing framework
+  gem "rspec-rails", "~> 6.1"
+
+  # Load environment variables from .env in development/test
+  gem "dotenv-rails"
 end
